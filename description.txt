@@ -1,0 +1,44 @@
+Population Dynamics Template Model
+
+This is an explicit use case of the lsd population module you may access here:
+https://github.com/FrederikSchaff/lsd-module-pop
+
+it works with LSD-GIS, which you can get here:
+https://github.com/FrederikSchaff/Lsd
+
+Objective: This is a template model, to be used as a starting point for LSD
+models where an explicit population model is wanted that includes a heritage
+network that survives the agents and allows, for example, to check family
+degrees.
+
+The model allows to add statistical population models. Currently one
+model is added, called "BLL", following:
+
+  [1] Boucekkine, Raouf; La Croix, David de; Licandro, Omar (2002):
+  Vintage Human Capital, Demographic Trends, and Endogenous Growth.
+  In Journal of Economic Theory 104 (2), pp. 340–375.
+  DOI: 10.1006/jeth.2001.2854.
+  
+In addition, the Wedding Ring model is implemented explicitly to define partner
+search:
+
+  [2] Billari, Francesco; Aparicio Diaz, Belinda; Fent, Thomas;
+  Fürnkranz-Prskawetz, Alexia (2007): The "Wedding-Ring". An agent-based
+  marriage model based on social interaction. In Demographic Research 17 (3),
+  pp. 59–82.
+  DOI: 10.4054/DemRes.2007.17.3.
+  
+  and
+  
+  [3] Bijak, Jakub; Hilton, Jason; Silverman, Eric; Cao, Viet Dung (2013):
+  Reforging the Wedding Ring. Exploring a Semi-Artificial Model of Population
+  for the United Kingdom with Gaussian process emulators. In Demographic
+  Research 29, pp. 729–766.
+  DOI: 10.4054/DemRes.2013.29.27.
+
+For information on how the back-end works, please take a look at the (yet
+scarce, I admit) documentation of the population module and the
+accompanying paper (to be comming).
+
+(PRESS CTRL+E TO EDIT USER EQUATIONS)
+

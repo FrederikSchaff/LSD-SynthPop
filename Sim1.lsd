@@ -1,0 +1,1011 @@
+	
+Label Root
+{
+	Son: Pop_Model
+	Label Pop_Model
+	{
+		Var: Pop_age
+		Var: Pop_birth
+		Param: m1_alpha
+		Param: m1_beta
+		Param: Pop_const_n
+		Param: Model_Type
+		Param: m0_maxLife
+		Func: Add_Agent
+		Param: StorckChildRate
+
+	}
+
+	Son: Agent
+	Label Agent
+	{
+		Var: age
+		Var: female
+		Param: death_age
+		Var: father
+		Var: mother
+		Func: Death
+		Var: Init_Agent
+		Func: Relevant_Other
+		Var: psearch_radius
+		Var: age_accept_low
+		Var: age_accept_high
+		Var: age_influence
+		Var: Social_Pressure
+		Func: Partner_Status
+		Func: Potential_Partner
+		Param: PartnerID
+		Param: ro_a_high
+		Param: ro_a_low
+		Var: Find_Partner
+		Var: ID
+		Var: nChildren
+		Param: tnext_pot_birth
+		Var: PotentialMother
+		Var: IsFertile
+		Param: AvgKinshipDegree
+		Param: nrelevant_others
+		Param: PartnerDegreeBlood
+		Param: d_social
+		Param: rel_n_partner
+
+	}
+
+	Son: Settings
+	Label Settings
+	{
+		Param: wr_gamma
+		Param: alpha_WR
+		Param: beta_WR
+		Param: c_WR
+		Param: distance_wd
+		Param: fertility_f_high
+		Param: fertility_f_low
+		Param: fertility_m_high
+		Param: fertility_m_low
+		Param: rho_WD
+		Param: WD_alt_model
+		Param: wr_hintvl
+		Param: timeToNewBirth
+		Param: min_sp_wd
+		Param: n_social
+
+	}
+
+	Var: Updating_Scheme
+	Param: SA_
+	Func: Delete_Agent
+	Var: Init_Global
+	Var: Statistics
+	Param: SP_avg
+	Param: SP_max
+	Param: SP_min
+	Param: SP_sd
+	Param: AvgKinshipDegree_avg
+	Param: AvgKinshipDegree_max
+	Param: AvgKinshipDegree_min
+	Param: AvgKinshipDegree_sd
+	Param: nChildren_avg
+	Param: nChildren_max
+	Param: nChildren_min
+	Param: nChildren_sd
+	Param: PartnerDegreeBlood_avg
+	Param: PartnerDegreeBlood_max
+	Param: PartnerDegreeBlood_min
+	Param: PartnerDegreeBlood_sd
+	Var: TimeSpent
+	Param: LastTime
+	Param: d_social_avg
+	Param: d_social_max
+	Param: d_social_min
+	Param: d_social_sd
+
+}
+
+
+DATA
+
+Object: Root C	1
+Var: Updating_Scheme 0 n + n n
+Param: SA_ 0 n + n n	0
+Func: Delete_Agent 0 n + n n
+Var: Init_Global 0 n + n n
+Var: Statistics 0 n + n n
+Param: SP_avg 0 s + n n	0
+Param: SP_max 0 s + n n	0
+Param: SP_min 0 s + n n	0
+Param: SP_sd 0 s + n n	0
+Param: AvgKinshipDegree_avg 0 n + n n	0
+Param: AvgKinshipDegree_max 0 n + n n	0
+Param: AvgKinshipDegree_min 0 n + n n	0
+Param: AvgKinshipDegree_sd 0 n + n n	0
+Param: nChildren_avg 0 s + n n	0
+Param: nChildren_max 0 s + n n	0
+Param: nChildren_min 0 s + n n	0
+Param: nChildren_sd 0 s + n n	0
+Param: PartnerDegreeBlood_avg 0 s + n n	0
+Param: PartnerDegreeBlood_max 0 s + n n	0
+Param: PartnerDegreeBlood_min 0 s + n n	0
+Param: PartnerDegreeBlood_sd 0 s + n n	0
+Var: TimeSpent 0 s + n p
+Param: LastTime 0 n + n n	0
+Param: d_social_avg 0 s + n n	0
+Param: d_social_max 0 s + n n	0
+Param: d_social_min 0 s + n n	0
+Param: d_social_sd 0 s + n n	0
+
+Object: Pop_Model C	1
+Var: Pop_age 0 s + n n
+Var: Pop_birth 0 s + n n
+Param: m1_alpha 0 n + n n	5.44
+Param: m1_beta 0 n + n n	-0.014729
+Param: Pop_const_n 0 s + n n	2000
+Param: Model_Type 0 n + n n	1
+Param: m0_maxLife 0 n + n n	50
+Func: Add_Agent 0 n + n n
+Param: StorckChildRate 0 s + n n	0
+
+Object: Agent C	1
+Var: age 0 n + n n
+Var: female 0 n + n n
+Param: death_age 0 n + n n	0
+Var: father 0 n + n n
+Var: mother 0 n + n n
+Func: Death 0 n + n n
+Var: Init_Agent 0 n + n n
+Func: Relevant_Other 0 n + n n
+Var: psearch_radius 0 n + n n
+Var: age_accept_low 0 n + n n
+Var: age_accept_high 0 n + n n
+Var: age_influence 0 n + n n
+Var: Social_Pressure 0 n + n n
+Func: Partner_Status 0 n + n n
+Func: Potential_Partner 0 n + n n
+Param: PartnerID 0 n + n n	0
+Param: ro_a_high 0 n + n n	0
+Param: ro_a_low 0 n + n n	0
+Var: Find_Partner 0 n + n n
+Var: ID 0 n + n n
+Var: nChildren 0 n + n n
+Param: tnext_pot_birth 0 n + n n	0
+Var: PotentialMother 0 n + n n
+Var: IsFertile 0 n + n n
+Param: AvgKinshipDegree 0 n + n n	0
+Param: nrelevant_others 0 n + n n	0
+Param: PartnerDegreeBlood 0 n + n n	0
+Param: d_social 0 n + n n	0
+Param: rel_n_partner 0 n + n n	0
+
+Object: Settings C	1
+Param: wr_gamma 0 n + n n	2
+Param: alpha_WR 0 n + n n	0.5
+Param: beta_WR 0 n + n n	7
+Param: c_WR 0 n + n n	25
+Param: distance_wd 0 n + n n	1
+Param: fertility_f_high 0 n + n n	45
+Param: fertility_f_low 0 n + n n	15
+Param: fertility_m_high 0 n + n n	65
+Param: fertility_m_low 0 n + n n	15
+Param: rho_WD 0 n + n n	1
+Param: WD_alt_model 0 n + n n	0
+Param: wr_hintvl 0 n + n n	2
+Param: timeToNewBirth 0 n + n n	3
+Param: min_sp_wd 0 n + n n	0.05
+Param: n_social 0 n + n n	180
+
+SIM_NUM 6
+SEED 9
+MAX_STEP 5000
+EQUATION fun_templ_pop.cpp
+MODELREPORT report_Sim1.html
+
+DESCRIPTION
+
+Object_Root
+(no description available)
+END_DESCRIPTION
+
+Variable_Updating_Scheme
+'Updating_Scheme' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_SA_
+A parameter to allow SA (no meaning for the theory)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Delete_Agent
+'Delete_Agent' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Init_Global
+'Init_Global' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Statistics
+'Statistics' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_SP_avg
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_SP_max
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_SP_min
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_SP_sd
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_AvgKinshipDegree_avg
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_AvgKinshipDegree_max
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_AvgKinshipDegree_min
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_AvgKinshipDegree_sd
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_nChildren_avg
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_nChildren_max
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_nChildren_min
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_nChildren_sd
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_PartnerDegreeBlood_avg
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_PartnerDegreeBlood_max
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_PartnerDegreeBlood_min
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_PartnerDegreeBlood_sd
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Variable_TimeSpent
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_LastTime
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_d_social_avg
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_d_social_max
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_d_social_min
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_d_social_sd
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Object_Pop_Model
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Pop_age
+'Pop_age' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Pop_birth
+'Pop_birth' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_m1_alpha
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_m1_beta
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_Pop_const_n
+If == 0, the population model will not generate new agents.
+
+If > 0, the population model will generate Pop_const_n * birth_rate agents (if birth_rate is a variable, the birth rate is constant and equal to 1/exp_life * Pop_const_n)
+
+If < 0, new generation is birth_rate * current n agents alive.
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_Model_Type
+Choice of population model.
+Model 0: NONE
+Model 1: BLL
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_m0_maxLife
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Add_Agent
+'Add_Agent' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_StorckChildRate
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Object_Agent
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_age
+'age' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_female
+'female' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_death_age
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_father
+ Provides the ID of the father, if exists. -1.0 else. 
+'father' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_mother
+ Provides the ID of the mother, if exists. -1.0 else. 
+'mother' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Death
+'Death' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Init_Agent
+'Init_Agent' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Relevant_Other
+'Relevant_Other' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_psearch_radius
+'psearch_radius' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_age_accept_low
+'age_accept_low' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_age_accept_high
+'age_accept_high' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_age_influence
+'age_influence' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_Social_Pressure
+'Social_Pressure' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Partner_Status
+'Partner_Status' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Function_Potential_Partner
+'Potential_Partner' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_PartnerID
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_ro_a_high
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_ro_a_low
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Variable_Find_Partner
+'Find_Partner' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_ID
+'ID' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_nChildren
+ Count number of children 
+'nChildren' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_tnext_pot_birth
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Variable_PotentialMother
+'PotentialMother' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Variable_IsFertile
+'IsFertile' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_AvgKinshipDegree
+'AvgKinshipDegree' appears in the equation for: (never used)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_nrelevant_others
+Size of the set of relevant others.
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_PartnerDegreeBlood
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_d_social
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_rel_n_partner
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Object_Settings
+Parameters relevant for the Wedding Ring model.
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_wr_gamma
+(no description available)
+_INIT_
+All 1 instances equal to 2.
+END_DESCRIPTION
+
+Parameter_alpha_WR
+(no description available)
+_INIT_
+All 1 instances equal to 0.5.
+END_DESCRIPTION
+
+Parameter_beta_WR
+(no description available)
+_INIT_
+All 1 instances equal to 7.
+END_DESCRIPTION
+
+Parameter_c_WR
+(no description available)
+_INIT_
+All 1 instances equal to 25.
+END_DESCRIPTION
+
+Parameter_distance_wd
+(no description available)
+_INIT_
+All 1 instances equal to 1.
+END_DESCRIPTION
+
+Parameter_fertility_f_high
+(no description available)
+_INIT_
+All 1 instances equal to 45.
+END_DESCRIPTION
+
+Parameter_fertility_f_low
+(no description available)
+_INIT_
+All 1 instances equal to 15.
+END_DESCRIPTION
+
+Parameter_fertility_m_high
+(no description available)
+_INIT_
+All 1 instances equal to 65.
+END_DESCRIPTION
+
+Parameter_fertility_m_low
+(no description available)
+_INIT_
+All 1 instances equal to 15.
+END_DESCRIPTION
+
+Parameter_rho_WD
+(no description available)
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_WD_alt_model
+(no description available)
+_INIT_
+All 1 instances equal to 0.
+END_DESCRIPTION
+
+Parameter_wr_hintvl
+(no description available)
+_INIT_
+All 1 instances equal to 2.
+END_DESCRIPTION
+
+Parameter_timeToNewBirth
+(no description available)
+_INIT_
+All 1 instances equal to 3.
+END_DESCRIPTION
+
+Parameter_min_sp_wd
+Minimum level of social pressure.
+_INIT_
+
+END_DESCRIPTION
+
+Parameter_n_social
+Number of people in social network.
+_INIT_
+
+END_DESCRIPTION
+
+
+DOCUOBSERVE
+
+END_DOCUOBSERVE
+
+
+DOCUINITIAL
+
+END_DOCUINITIAL
+
+
+EQ_FILE
+#include <random>    //else potential problems with _abs()
+#include "fun_head_fast.h"
+/******************************************************************************/
+/*          A B M A T                                                         */
+/*  The Design of Experiment. The Design Point Matrixes                       */
+/*  need to be linked here, to be selected via LSD-Browser.                   */
+/*  The Names of the Design are used for Folder Creation                      */
+/*  and Data saving issues.                                                   */
+/* -------------------------------------------------------------------------- */
+  #define ABMAT_ANALYSIS_CFG_PATH "DOE/ABMAT_Analysis.cfg" //Define where the Analysis.cfg lies. There locations of Analysis tsv files, indicating which variables to report and how, are provided.
+  //#define ABMAT_DPM_CFG_PATH "DOE/ABMAT_DPM.cfg" //Define where the Design Point Matrix lies.
+  #define ABMAT_INTERVALS_CFG_PATH "DOE/ABMAT_Intervals.cfg" //Define where the Intervals cfg lies.
+  
+  //#define ABMAT_USE_DOE
+  #define ABMAT_USE_ANALYSIS                               
+  #include "external/ABMAT/ABMAT_head.h"  //load the Analysis Toolkit
+  
+  /* Also load a balpha distribution from  
+    https://stackoverflow.com/a/15166623/3895476 
+    also: (this version) https://gist.github.com/sftrabbit/5068941
+  */
+  //#include "files/balpha_distribution/balpha_distribution.hpp"
+
+// #include <vector>
+// #include <tuple>
+// #include <string>
+// #include <algorithm>
+//
+
+
+
+
+
+/********************************************************/
+/* To clearly mark tests and also allow to not run them */
+#define MY_END_EQUATION( X )  return X
+//#define TEST_IN(X) if (true && (X) ) {   //Testing on              //
+#define TEST_IN(X) if (false && X) {  //Testing off           //
+#define TEST_OUT }                                      //
+                                                        //
+//#define VERBOSE_IN(X) if (true && (X) ) {                          //
+#define VERBOSE_IN(X) if (false && X) {                       //
+#define VERBOSE_OUT }                                   //
+/********************************************************/
+
+/********************************************************/
+/* Some pure c/c++ helpers                              */
+
+#include "backend_population.cpp" //the backend for heritage network information
+
+/* For the Kaminski population model */
+const int age_of_maturaty = 14;
+const int age_parents[2] = {18,35}; //improve later
+/*+++++++++++++++++++++++++++++++++++*/
+
+MODELBEGIN
+
+#include "external/ABMAT/ABMAT_LSD.cpp" //load the ABMAT equations
+
+/*----------------------------------------------------------------------------*/
+/*           General Helpers                                                  */
+/*----------------------------------------------------------------------------*/
+
+EQUATION("Updating_Scheme")
+if (t==1){
+V("Pop_init");
+}
+
+/* Before all else, the population is updated */
+V("Pop_death");
+V("Pop_birth");
+V("Pop_age");
+
+
+
+RESULT(0.0)
+
+
+/*----------------------------------------------------------------------------*/
+/*           Population Model, following [1,2]                                */
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    In LSD Model, provide an object "Population" which holds the following:
+    Pop_init    Equation
+    Pop_alpha   alpha value
+    Pop_beta    beta value
+
+
+
+/*----------------------------------------------------------------------------*/
+
+
+/*++++++++++++++++++++++
+    Generic Part
+    +++++++++++++++++++++++*/
+
+EQUATION("Pop_init")
+/* Initialise the population model */
+
+  /* Init external backend */
+  ADDEXT(ext_pop);
+  object* agent_blueprint = SEARCHS(p->up,"Agent");
+  //Pass info of object holding the Pop-equations, seed, object holding agents.
+  P_EXT(ext_pop)->pop_init(p,seed,agent_blueprint->up,V("Pop_alpha"),V("Pop_beta") ); //using LSD seed for internal prng,
+  /*------*/
+
+  /* Initialise the discretised survival function.
+  The survival function follows Kaminski et. al. 2017
+  */
+  double beta = V("Pop_beta");
+  double alpha = V("Pop_alpha");
+
+                        TEST_IN(beta >= 0)
+                        	PLOG("\nError: beta >= 0");
+                        	quit = 1;MY_END_EQUATION(0.0);
+                        TEST_OUT
+                        TEST_IN(alpha <= 1)
+                        	PLOG("\nError: alpha <= 0");
+                        	quit = 1;MY_END_EQUATION(0.0);
+                        TEST_OUT
+
+
+
+  /*------*/
+
+  /* Initialise the population and the population statistics
+
+  - Create n_agent agents.
+  - Create distribution of agent-age
+  - Assign agent-age (perfect corr of ID and Age)
+  - Assign parents (not perfect, but rough)
+  ...
+
+
+  */
+
+  int n_agent = int(V("n_agent"));
+  double birth_rate = V("Pop_birth_rate");  //exogeneous, fixed birth rate
+
+  //Realocate the vector holding the pointers for each agent ever existed in order to be sufficiently big for the whole run.
+  int max_expected_entries = n_agent + birth_rate*double(n_agent)*double(max_step)*1.05; //extra 5%
+  P_EXT(ext_pop)->expected_total(max_expected_entries);
+
+  //Add missing agents.
+  for (int i=0; i< n_agent; i++){ V_CHEAT("Pop_agent_birth",p->up); }
+  //And delete the blueprint, which is not linked to the backend
+  DELETE(agent_blueprint);
+
+  /*++++++++++++++++++++++++++++++++++++++++++++*/
+  /*    Initialise the age-structure
+
+    We can initialise the initial age structure proportional to the survival
+    rates by assigning each agent a random uniform value within 0,1.
+
+    The number of agents
+  */
+
+    std::vector <int> age =  P_EXT(ext_pop)->pop_init_age_dist(V("n_agent"));
+
+    //Assign age to agents
+    int cur_age_idx = age.size();
+    CYCLES(p->up,cur1,"Agent"){
+
+                                  TEST_IN(cur_age_idx<1)
+                                    PLOG("\nError! See line 181 in fun_templ..");
+                                    break;
+                                  TEST_OUT
+
+      WRITES(cur1,"age", age.at(--cur_age_idx) ); //add age and increase i afterwards
+    }
+  /*--------------------------------------------*/
+
+  /* What about relations? How to initialise a heritage network? */
+  //to do,
+
+PARAMETER
+RESULT(0)
+
+FUNCTION("Pop_agent_death")
+/* Delete the provided (via FAKE CALLER) agent.*/
+
+                    TEST_IN(std::string(c->label)!=std::string("Agent"))
+                      PLOG("\nError! Trying to delete %s which is not of type %s",c->label,"Agent");
+                    TEST_OUT
+  P_EXT(ext_pop)->agentDies(VS(c,"ID"));
+  DELETE(c); //delete the caller.
+
+RESULT(0)
+
+FUNCTION("Pop_agent_birth")
+/* Create a new agent. FAKE CALLER tells where. */
+
+  cur=ADDOBJS(c,"Agent");
+  ext_pop_agent*  agent_ext = P_EXT(ext_pop)->newAgent(cur);
+  WRITES(cur,"ID",agent_ext->ID);
+  WRITES(cur,"age",0);
+  WRITES(cur,"female",agent_ext->female); //will be 0 for male, 1 for female.
+  WRITES(cur,"death_age",agent_ext->death_age); //Already, it is decided when the agent will die (at least)
+
+  if (t==1){
+    //Initialisation
+  } else {
+    //After initialisation
+
+  /* Model specific */
+    //Get parents
+    //get initial NW
+    //stuff
+  /*----------------*/
+  }
+RESULT(0)
+
+EQUATION("Pop_death")
+/* Check which agents need to be deleted and call "Pop_agent_death" for each one
+*/
+
+  CYCLES(p->up,cur,"Agent"){
+    if ( VS(cur,"age") >= VS(cur,"death_age")  ) {
+      V_CHEAT("Pop_agent_death",cur);
+    }
+  }
+
+RESULT(0)
+
+EQUATION("Pop_birth")
+/* Model the population process and create the necessary agents. */
+  int newborn = 0; //number of newborn, needs to be initialised.
+
+  /* Following Kaminski et. al. 2017 there is a fixed birth rate */
+  newborn = int( V("birth_rate") * V("n_agent") + pop_uniform() ); //n_agent_all + uniform(0,1) ); //add uniform to round up/down randomly.
+  /*-----------------------*/
+
+  /* General spawn process */
+  for (int i=0; i< newborn; i++){
+    V_CHEAT("Pop_agent_birth",p->up);
+  }
+  /*-----------------------*/
+
+RESULT(double(newborn))
+
+EQUATION("Pop_age")
+/* Each agents get older one year. */
+  CYCLES(p->up,cur,"Agent"){
+    INCRS(cur,"age",1.0);
+  }
+RESULT(0)
+
+EQUATION("Pop_birth_rate")
+/* Following [2], assume a constant birth rate. */
+
+double birth_rate = 1.0 / P_EXT(ext_pop)->expected_death;
+
+                              VERBOSE_IN(true)
+                              PLOG("\nExpected death with age %g",P_EXT(ext_pop)->expected_death);
+                              PLOG("\nConstant population birth_rate is %g",birth_rate);
+                              VERBOSE_OUT
+
+PARAMETER
+RESULT(birth_rate)
+
+/*----------------------------------------------------------------------------/*
+
+/* Theory specific below */
+
+
+
+
+
+
+
+
+
+
+MODELEND
+
+
+
+
+void close_sim(void)
+{
+
+}
+
+
+
+END_EQ_FILE
