@@ -119,15 +119,15 @@ Param: AvgKinshipDegree_avg 0 n + n n	0
 Param: AvgKinshipDegree_max 0 n + n n	0
 Param: AvgKinshipDegree_min 0 n + n n	0
 Param: AvgKinshipDegree_sd 0 n + n n	0
-Param: nChildren_avg 0 s + n n	0
-Param: nChildren_max 0 s + n n	0
-Param: nChildren_min 0 s + n n	0
-Param: nChildren_sd 0 s + n n	0
+Param: nChildren_avg 0 s + n p	0
+Param: nChildren_max 0 s + n p	0
+Param: nChildren_min 0 s + n p	0
+Param: nChildren_sd 0 s + n p	0
 Param: PartnerDegreeBlood_avg 0 s + n n	0
 Param: PartnerDegreeBlood_max 0 s + n n	0
 Param: PartnerDegreeBlood_min 0 s + n n	0
 Param: PartnerDegreeBlood_sd 0 s + n n	0
-Var: TimeSpent 0 s + n p
+Var: TimeSpent 0 s + n n
 Param: LastTime 0 n + n n	0
 Param: d_social_avg 0 s + n n	0
 Param: d_social_max 0 s + n n	0
@@ -193,7 +193,7 @@ Param: timeToNewBirth 0 n + n n	3
 Param: min_sp_wd 0 n + n n	0.05
 Param: n_social 0 n + n n	180
 
-SIM_NUM 6
+SIM_NUM 1
 SEED 9
 MAX_STEP 5000
 EQUATION fun_templ_pop.cpp
